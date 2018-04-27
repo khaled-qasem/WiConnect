@@ -1,5 +1,6 @@
 package wiconnect.khaled.com.wiconnect.utils;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import wiconnect.khaled.com.wiconnect.BuildConfig;
@@ -18,7 +19,8 @@ public class Logger {
         this.LOG_TAG = clazz.getSimpleName();
     }
 
-    public static Logger loggerFor(Class clazz) {
+    @NonNull
+    public static Logger createLogger(Class clazz) {
         return new Logger(clazz);
     }
 
